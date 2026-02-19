@@ -12,17 +12,18 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center justify-center bg-black text-white py-20 overflow-hidden">
+        <section className="relative -mt-4 md:-mt-6 min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
           <div className="absolute inset-0 brightness-[0.3]">
-            <Image
-              alt="Delivery Background"
+            <video
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=2000"
-              fill
-              priority
+              src="/zoomdispatch.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
-          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-24 pb-20 md:pt-28 md:pb-24">
             <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight text-white">
               Fast, Reliable <br/>Delivery.
             </h1>
@@ -52,7 +53,7 @@ export default function LandingPage() {
         </section>
 
         {/* Section 1: How It Works */}
-        <section className="py-24 bg-white dark:bg-background-dark/40" id="how-it-works">
+        <section className="py-24 bg-white" id="how-it-works">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">How It Works</h2>
@@ -87,7 +88,7 @@ export default function LandingPage() {
         </section>
 
         {/* Section 2: Services */}
-        <section className="py-24 bg-background-light dark:bg-background-dark" id="services">
+        <section className="py-24 bg-background-light" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
               <div className="max-w-xl">
@@ -120,7 +121,7 @@ export default function LandingPage() {
         </section>
 
         {/* Section 3: Why Choose Us */}
-        <section className="py-24 bg-white dark:bg-background-dark/40 overflow-hidden" id="why-us">
+        <section className="py-24 bg-white overflow-hidden" id="why-us">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1 relative">
@@ -208,7 +209,7 @@ function ServiceCard({ icon, title, description, highlighted = false }: { icon: 
   const baseClasses = "p-8 rounded-2xl transition-all shadow-sm hover:shadow-xl";
   const classes = highlighted
     ? `${baseClasses} bg-primary text-white shadow-xl shadow-primary/20`
-    : `${baseClasses} bg-white dark:bg-accent-dark border border-primary/5 hover:border-primary/20`;
+    : `${baseClasses} bg-white border border-primary/5 hover:border-primary/20`;
 
   return (
     <div className={classes}>
@@ -216,19 +217,19 @@ function ServiceCard({ icon, title, description, highlighted = false }: { icon: 
         <MaterialIcon icon={icon} className="text-4xl" />
       </div>
       <h3 className="text-2xl font-bold mb-3 tracking-tight">{title}</h3>
-      <p className={`${highlighted ? 'text-white/90' : 'text-accent-dark/70 dark:text-white/70'} leading-relaxed`}>{description}</p>
+      <p className={`${highlighted ? 'text-white/90' : 'text-accent-dark/70'} leading-relaxed`}>{description}</p>
     </div>
   );
 }
 
 function WhyUsCard({ icon, title, description, className = '' }: { icon: string, title: string, description: string, className?: string }) {
   return (
-    <div className={`bg-background-light dark:bg-accent-dark p-6 rounded-2xl border border-primary/10 ${className}`}>
+    <div className={`bg-background-light p-6 rounded-2xl border border-primary/10 ${className}`}>
       <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4">
         <MaterialIcon icon={icon} />
       </div>
       <h4 className="font-bold text-lg mb-2">{title}</h4>
-      <p className="text-sm text-accent-dark/60 dark:text-white/60">{description}</p>
+      <p className="text-sm text-accent-dark/60">{description}</p>
     </div>
   );
 }

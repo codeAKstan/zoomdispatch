@@ -4,13 +4,13 @@ import MaterialIcon from './MaterialIcon';
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e6dfdb] dark:border-white/10 px-4 md:px-10 py-3">
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#e6dfdb] px-4 md:px-10 py-3">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="bg-primary p-1.5 rounded-lg text-white">
             <MaterialIcon icon="local_shipping" className="block text-2xl" />
           </div>
-          <h1 className="text-[#181411] dark:text-white text-xl font-black tracking-tight">ZoomDispatch</h1>
+          <h1 className="text-[#181411] text-xl font-black tracking-tight">ZoomDispatch</h1>
         </Link>
 
         <div className="flex items-center gap-6">

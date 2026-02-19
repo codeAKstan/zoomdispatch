@@ -4,7 +4,7 @@ import MaterialIcon from './MaterialIcon';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-background-light dark:bg-background-dark border-t border-primary/10 pt-20 pb-10">
+    <footer className="bg-background-light border-t border-primary/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-accent-dark dark:text-white">Quick Links</h4>
-            <ul className="space-y-4 text-sm font-medium text-accent-dark/60 dark:text-white/60">
+            <h4 className="font-bold mb-6 text-accent-dark">Quick Links</h4>
+            <ul className="space-y-4 text-sm font-medium text-accent-dark/60">
               <li><Link href="/book" className="hover:text-primary transition-colors">Book a Delivery</Link></li>
               <li><Link href="/track" className="hover:text-primary transition-colors">Track a Package</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Become a Rider</a></li>
@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-accent-dark dark:text-white">Company</h4>
-            <ul className="space-y-4 text-sm font-medium text-accent-dark/60 dark:text-white/60">
+            <h4 className="font-bold mb-6 text-accent-dark">Company</h4>
+            <ul className="space-y-4 text-sm font-medium text-accent-dark/60">
               <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Safety Policies</a></li>
@@ -48,8 +48,8 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-accent-dark dark:text-white">Contact Info</h4>
-            <ul className="space-y-4 text-sm font-medium text-accent-dark/60 dark:text-white/60">
+            <h4 className="font-bold mb-6 text-accent-dark">Contact Info</h4>
+            <ul className="space-y-4 text-sm font-medium text-accent-dark/60">
               <li className="flex items-center gap-2">
                 <MaterialIcon icon="mail" className="text-primary text-lg" />
                 support@zoomdispatch.com
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-accent-dark/40 dark:text-white/40 uppercase tracking-widest">
+        <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-accent-dark/40 uppercase tracking-widest">
           <p>© 2024 ZoomDispatch Logistics. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
